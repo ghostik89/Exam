@@ -16,10 +16,21 @@ int main() {
 		char* firstptr = strchr(tempstr, '\\');
 		char* secondptr = strchr((firstptr + 1), '\\');
 
-		if (secondptr != NULL && firstptr != NULL) {
-			strncpy(Folders[counter], tempstr, secondptr - tempstr);
-			counter++;
-			NoSolution = false;
+		if (firstptr != NULL) {
+			if (secondptr == NULL) {
+				char* pointptr = strrchr((firstptr + 1), '.');
+				if (pointptr == NULL && strlen(tempstr) > 3) {
+					strcpy(Folders[counter], tempstr);
+					counter++;
+					NoSolution = false;
+				}
+			}
+			else {
+				strncpy(Folders[counter], tempstr, secondptr - tempstr);
+				Folders[counter][secondptr - tempstr] = '\0';
+				counter++;
+				NoSolution = false;
+			}
 		}
 
 	}
