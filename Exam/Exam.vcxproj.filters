@@ -27,5 +27,8 @@
     <ClCompile Include="lit_exe1.cpp">
       <Filter>Исходные файлы\litovkin examples</Filter>
     </ClCompile>
+    <ClCompile Include="lit_exe2.cpp">
+      <Filter>Исходные файлы\litovkin examples</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

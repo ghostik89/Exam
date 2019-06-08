@@ -7,6 +7,10 @@ int main() {
 	char Folders[30][255];
 	int N;
 	scanf("%d\n", &N);
+	if (N < 1 || N > 30) {
+		printf("Invalid data\n");
+		return 0;
+	}
 
 	char tempstr[255];
 	int counter = 0;
