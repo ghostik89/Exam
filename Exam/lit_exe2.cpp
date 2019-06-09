@@ -15,9 +15,9 @@ void swapColumn(int matrix[20][20], int N, int M, int index1, int index2) {
 	int temp;
 
 	for (int i = 0; i < N; i++) {
-		temp = matrix[index1][i];
-		matrix[index1][i] = matrix[index2][i];
-		matrix[index2][i] = temp;
+		temp = matrix[i][index1];
+		matrix[i][index1] = matrix[i][index2];
+		matrix[i][index2] = temp;
 	}
 	
 }
